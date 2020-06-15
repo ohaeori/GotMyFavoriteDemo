@@ -22,16 +22,9 @@ class MatchingViewController: UIViewController {
     @IBAction func MatchingStart(_ sender: Any) {
         
         makeArr()
-        //socket connect
-        //send my for(1~10)
-        //receieved 10
-        //mk arr
-        
-        
         //change StoryBoard
         let storyboard: UIStoryboard = UIStoryboard(name: "Quiz", bundle: nil)
         let next = storyboard.instantiateViewController(withIdentifier: "Quiz") as? QuestionViewController
-        next?.quizArr = ["최첨단","역동적인","유머 있는","소름 돋는","학살 하는","경쟁 하는","환상적인","리듬감 있는","사랑스러운","dd"]
         next?.modalPresentationStyle = .fullScreen
         next?.modalTransitionStyle = .coverVertical
         self.present(next!, animated: true, completion: nil)
@@ -48,15 +41,14 @@ class MatchingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         SocketIOManager.shared.socketConnect()
-//        if (labelString == "none"){
-//            MatchingBtn.isEnabled = false
-//        }
+        if (labelString == "none"){
+            MatchingBtn.isEnabled = false
+        }
         titleLabel.text = labelString
         idLabel.text = receivedID
     }
     
     func makeArr(){
         SocketIOManager.shared.socketConnect()
-        SocketIOManager.shared.sendMsg(message: "장난감", nickname: "www")
-    }
+        SocketIOManager.shared.sendMsg(message: labelString, nickname: receivedID)    }
 }
