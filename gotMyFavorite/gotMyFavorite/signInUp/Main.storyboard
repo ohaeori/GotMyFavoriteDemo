@@ -354,12 +354,6 @@
                                     </attributedString>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
-<<<<<<< HEAD
-=======
-                                <connections>
-                                    <action selector="matchStart:" destination="9b1-lr-7sl" eventType="touchUpInside" id="AVA-Pm-gZy"/>
-                                </connections>
->>>>>>> parent of 7cd0aed... update
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="RMj-gl-guV">
                                 <rect key="frame" x="197" y="438" width="20" height="20"/>
@@ -383,13 +377,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-<<<<<<< HEAD
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="칭호" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRN-jZ-eqe">
                                         <rect key="frame" x="73" y="100" width="50" height="20"/>
-=======
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="칭호" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRN-jZ-eqe">
-                                        <rect key="frame" x="73" y="93" width="328" height="27"/>
->>>>>>> parent of 7cd0aed... update
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.35918039080000003" green="0.31451284889999997" blue="0.83926504850000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -468,10 +457,6 @@
                         <viewLayoutGuide key="safeArea" id="LnV-A4-D2L"/>
                     </view>
                     <connections>
-<<<<<<< HEAD
-=======
-                        <outlet property="MatchingBtn" destination="csS-9x-jKv" id="i90-sA-kmC"/>
->>>>>>> parent of 7cd0aed... update
                         <outlet property="idLabel" destination="Eiw-v9-TPR" id="MIL-d1-H5u"/>
                         <outlet property="titleLabel" destination="fRN-jZ-eqe" id="hC9-zt-PEn"/>
                     </connections>
