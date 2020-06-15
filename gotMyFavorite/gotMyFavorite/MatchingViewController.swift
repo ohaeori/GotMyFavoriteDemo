@@ -19,6 +19,14 @@ class MatchingViewController: UIViewController {
     var labelString: String = "none"
     var socket: SocketIOClient!
     
+    @IBAction func MatchingStart(_ sender: Any) {
+        //change StoryBoard
+        let storyboard: UIStoryboard = UIStoryboard(name: "Quiz", bundle: nil)
+        let next = storyboard.instantiateInitialViewController()
+        next?.modalPresentationStyle = .fullScreen
+        next?.modalTransitionStyle = .coverVertical
+        self.present(next!, animated: true, completion: nil)
+    }
     @IBAction func ModifyFavorite(_ sender: Any) {
         //change StoryBoard
         let storyboard: UIStoryboard = UIStoryboard(name: "getFavorite", bundle: nil)
