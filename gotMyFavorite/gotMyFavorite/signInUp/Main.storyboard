@@ -444,7 +444,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="kkJ-ov-ZRv" kind="show" id="Jgn-C4-CIj"/>
+                                            <segue destination="kkJ-ov-ZRv" kind="push" id="wlG-rm-daa"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -468,10 +468,10 @@
             </objects>
             <point key="canvasLocation" x="982.60869565217399" y="126.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--List View Controller-->
         <scene sceneID="Qep-KW-n7x">
             <objects>
-                <viewController id="kkJ-ov-ZRv" sceneMemberID="viewController">
+                <viewController id="kkJ-ov-ZRv" customClass="ListViewController" customModule="gotMyFavorite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Jt-5B-mU0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -498,11 +498,13 @@
                                 <rect key="frame" x="20" y="64" width="374" height="744"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EP7-ty-2JX">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="744"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2X-kC-H9Z">
+                                        <rect key="frame" x="8" y="8" width="155" height="73"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </tableView>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Uf3-bC-mx1"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="YY7-Rh-C6M"/>
@@ -512,6 +514,9 @@
                         <viewLayoutGuide key="safeArea" id="43e-kL-FQT"/>
                     </view>
                     <navigationItem key="navigationItem" id="6zN-WK-w58"/>
+                    <connections>
+                        <outlet property="bulletLabel" destination="s2X-kC-H9Z" id="cqw-Qz-j5r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XM9-pD-QC2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
