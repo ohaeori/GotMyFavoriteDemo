@@ -20,6 +20,14 @@ class MatchingViewController: UIViewController {
     var socket: SocketIOClient!
     
     @IBAction func MatchingStart(_ sender: Any) {
+        
+        makeArr()
+        //socket connect
+        //send my for(1~10)
+        //receieved 10
+        //mk arr
+        
+        
         //change StoryBoard
         let storyboard: UIStoryboard = UIStoryboard(name: "Quiz", bundle: nil)
         let next = storyboard.instantiateViewController(withIdentifier: "Quiz") as? QuestionViewController
@@ -45,5 +53,10 @@ class MatchingViewController: UIViewController {
 //        }
         titleLabel.text = labelString
         idLabel.text = receivedID
+    }
+    
+    func makeArr(){
+        SocketIOManager.shared.socketConnect()
+        SocketIOManager.shared.sendMsg(message: "장난감", nickname: "www")
     }
 }

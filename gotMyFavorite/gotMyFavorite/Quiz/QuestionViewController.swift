@@ -82,6 +82,8 @@ class QuestionViewController: UIViewController {
     }
     
     func labelControl(cnt: Int, col: UIColor){
+        let k = SocketIOManager.shared.getMsg()
+        
         labelArr[cnt%10].backgroundColor = col
         if (cnt == 0 && btnO.titleColor(for: .normal)==#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)){
             btnO.setTitleColor(#colorLiteral(red: 0.8232281208, green: 1, blue: 0.5762448311, alpha: 1), for: .normal)
