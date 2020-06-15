@@ -11,7 +11,6 @@ import UIKit
 class FoodViewController: UIViewController {
     @IBOutlet weak var Label: UILabel!
     
-    var receivedID: String = ""
     var labelString: String = ""
     var mediaString: String = "default"
     var subString: String = " "
@@ -48,12 +47,13 @@ class FoodViewController: UIViewController {
         }
         else if(subTitle == "none"){
             subTitle = "(혹은 " + subString + (button.currentTitle ?? "err") + " 일지도...)"
+            User.Users[0].mainTitle = self.mainTitle
+            User.Users[0].subTitle = self.subTitle
             let nextstoryboard: UIStoryboard? = UIStoryboard(name: "Main", bundle: nil)
             let next = nextstoryboard?.instantiateViewController(withIdentifier: "MatchingViewController") as? MatchingViewController
-            next?.receivedID = self.receivedID
             next?.modalPresentationStyle = .fullScreen
             next?.modalTransitionStyle = .coverVertical
-            next?.labelString = mainTitle + subTitle
+            //next?.labelString = mainTitle + subTitle
             self.present(next!, animated: true)
         }
         

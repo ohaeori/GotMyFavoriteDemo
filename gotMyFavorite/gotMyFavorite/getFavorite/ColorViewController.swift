@@ -10,7 +10,6 @@ import UIKit
 
 class ColorViewController: UIViewController {
 
-    var receivedID: String = ""
     var labelString: String = ""
     var count = arc4random_uniform(2)
     var color : [String:[String]] = [
@@ -31,7 +30,6 @@ class ColorViewController: UIViewController {
         if let cvc = segue.destination as? MediaViewController{
             if let label = segue.identifier{
                 cvc.labelString = color[label]![3.arc4random]
-                cvc.receivedID = self.receivedID
             }
         
        }

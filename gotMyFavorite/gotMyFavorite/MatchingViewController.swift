@@ -12,7 +12,9 @@ import SocketIO
 class MatchingViewController: UIViewController {
     
     @IBOutlet weak var idLabel: UILabel!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel1: UILabel!
+    @IBOutlet weak var titleLabel2: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var MatchingBtn: UIButton!
     
     var receivedID: String = ""
@@ -42,8 +44,11 @@ class MatchingViewController: UIViewController {
         super.viewDidLoad()
         SocketIOManager.shared.socketConnect()
       
-        titleLabel.text = labelString
+        titleLabel1.sizeToFit()
+        titleLabel1.text = User.Users[0].mainTitle + User.Users[0].subTitle
+        
         idLabel.text = User.Users[0].id
+        genderLabel.text = User.Users[0].gender=="남" ? "🚹" : "🚺"
     }
     
     func makeArr(){

@@ -47,7 +47,6 @@ class SignInViewController: UIViewController {
             guard let next = nextstoryboard?.instantiateViewController(withIdentifier: "CVC") as? ColorViewController else {
                 return
             }
-            next.receivedID = self.idTextField.text!
             next.modalPresentationStyle = .fullScreen
             next.modalTransitionStyle = .coverVertical
             self.present(next, animated: true)

@@ -9,7 +9,6 @@
 import UIKit
 
 class MediaViewController: UIViewController {
-    var receivedID: String = ""
     var labelString: String = ""
     var mediaString: String = "default"
     var subString: String = " "
@@ -38,7 +37,6 @@ class MediaViewController: UIViewController {
             cvc.labelString = labelString
             cvc.mediaString = mediaString
             cvc.subString = subString
-            cvc.receivedID = self.receivedID
             
         }
         if let cvc = segue.destination as? MediaThemeViewController{
@@ -46,7 +44,6 @@ class MediaViewController: UIViewController {
             cvc.mediaString = mediaString
             cvc.subString = subString
             cvc.themeString = segue.identifier ?? " "
-            cvc.receivedID = self.receivedID
         }
         
         

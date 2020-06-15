@@ -21,7 +21,6 @@ class MediaThemeViewController: UIViewController {
     @IBOutlet weak var btn8: UIButton!
     @IBOutlet weak var btn9: UIButton!
     
-    var receivedID: String = ""
     var labelString: String = ""
     var mediaString: String = "default"
     var subString: String = " "
@@ -77,7 +76,6 @@ class MediaThemeViewController: UIViewController {
                 cvc.mediaString = mediaString + " "
             }
             cvc.labelString = labelString
-            cvc.receivedID = self.receivedID
             MediaViewController.cnt += 1
         }
         

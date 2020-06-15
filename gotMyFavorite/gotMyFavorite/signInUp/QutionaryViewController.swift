@@ -11,24 +11,23 @@ import UIKit
 class QutionaryViewController: UIViewController {
     @IBOutlet weak var inputQ: UITextField!
     @IBOutlet weak var qlistView: UITableView!
-    var qlist = [String]()
-    var answerlist = [String]()
     
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func OClick(_ sender: UIButton) {
-        self.qlist.append(inputQ.text!)
-        self.answerlist.append("o")
-        let indexPath = IndexPath(row: self.qlist.count - 1, section: 0)
+        User.Users[0].qList.append(inputQ.text!)
+        User.Users[0].ansList.append("o")
+        let indexPath = IndexPath(row: User.Users[0].qList.count - 1, section: 0)
         self.qlistView.insertRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         inputQ.text = ""
     }
     
     @IBAction func XClick(_ sender: UIButton) {
-        self.qlist.append(inputQ.text!)
-        self.answerlist.append("x")
-        let indexPath = IndexPath(row: self.qlist.count - 1, section: 0)
+        User.Users[0].qList.append(inputQ.text!)
+        User.Users[0].ansList.append("x")
+        let indexPath = IndexPath(row: User.Users[0].qList.count - 1, section: 0)
         self.qlistView.insertRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         inputQ.text = ""
     }
@@ -42,14 +41,14 @@ class QutionaryViewController: UIViewController {
 
 extension QutionaryViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-                return qlist.count
+                return User.Users[0].qList.count
 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = qlistView.dequeueReusableCell(withIdentifier: "customTableViewCell", for: indexPath) as! customTableViewCell
-        cell.questionLabel.text = String(indexPath.row + 1) + ". " + qlist[indexPath.row]
-        if(answerlist[indexPath.row] == "o"){
+        cell.questionLabel.text = String(indexPath.row + 1) + ". " + User.Users[0].qList[indexPath.row]
+        if(User.Users[0].ansList[indexPath.row] == "o"){
             cell.XButton.alpha = 0
         } else {
             cell.OButton.alpha = 0
@@ -58,12 +57,16 @@ extension QutionaryViewController: UITableViewDataSource{
         return cell
     }
     
-    internal func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCell.EditingStyle.delete {
-            qlist.remove(at: indexPath.row)
-            self.qlistView.insertRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-        }
-    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+           if editingStyle == .delete {
+               // Delete the row from the data source
+               User.Users[0].qList.remove(at: (indexPath as NSIndexPath).row)
+               User.Users[0].ansList.remove(at: (indexPath as NSIndexPath).row)
+               tableView.deleteRows(at: [indexPath], with: .fade)
+           } else if editingStyle == .insert {
+               // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+           }
+       }
 }
 
 extension QutionaryViewController: UITableViewDelegate{

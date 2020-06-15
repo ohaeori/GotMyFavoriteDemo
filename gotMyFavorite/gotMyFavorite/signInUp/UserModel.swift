@@ -15,7 +15,9 @@ struct User {
     var name: String
     var gender: String
     var mainTitle: String
-    var subTittle: String
+    var subTitle: String
+    var qList = [String]()
+    var ansList = [String]()
     
     static var Users = [User]()
     
@@ -41,7 +43,7 @@ struct User {
         self.name = "";
         self.gender = "";
         self.mainTitle = "";
-        self.subTittle = "";
+        self.subTitle = "";
     }
     
     init(id: String, pwd: String, name: String, gender: String){
@@ -50,7 +52,9 @@ struct User {
         self.name = name;
         self.gender = gender;
         self.mainTitle = "";
-        self.subTittle = "";
+        self.subTitle = "";
+        self.qList = ["질문1", "질문2", "질문3", "질문4", "질문5", "질문6"];
+        self.ansList = ["o", "o", "x", "o", "o", "x"];
     }
 }
 
