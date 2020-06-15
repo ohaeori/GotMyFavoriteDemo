@@ -14,6 +14,7 @@ class QuestionViewController: UIViewController {
     var cntNum : Int = 0
     var sizeO : Int = 280
     var sizeX : Int = 280
+    var quizArr: [String] = []
     
     @IBOutlet weak var l1: UILabel!
     @IBOutlet weak var l2: UILabel!
@@ -29,7 +30,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var btnX: UIButton!
     @IBOutlet weak var btnO: UIButton!
     var labelArr : [UILabel] = []
-
+    var receivedID: String = ""
     @IBOutlet weak var Quiz: UIButton!
     
     override func viewDidLoad() {
@@ -99,14 +100,28 @@ class QuestionViewController: UIViewController {
     }
     
     func goNext(){
-        cntNum += 1
-        let str = String(cntNum) + "Q"
-        Quiz.setTitle(str, for: .normal)
-        
         if(cntNum == 10){
-            
+//            let storyboard: UIStoryboard = UIStoryboard(name: "Quiz", bundle: nil)
+//            let next = storyboard.instantiateViewController(withIdentifier: "Result") as? ResultViewController
+//            
+//            next?.score = cntO*10
+//            
+//            next?.receivedID = self.receivedID
+//            next?.modalPresentationStyle = .fullScreen
+//            next?.modalTransitionStyle = .coverVertical
+//            self.present(next!, animated: true, completion: nil)
+//            print("here")
         }
-    }
+        else{
+            cntNum += 1
+            let str = "Q" + String(cntNum) + "\n" + quizArr[cntNum-1]
+            Quiz.setTitle(str, for: .normal)
+            
+            
+            print("ee" + String(cntNum))
+        }
+        
+        }
     
 }
 
