@@ -98,7 +98,6 @@
 		63D5042F24905B740004D677 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5042E24905B740004D677 /* SingUpViewController.swift */; };
 		63D5043124905B8F0004D677 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5043024905B8F0004D677 /* UserModel.swift */; };
 		63D5043424905BF60004D677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D5043324905BF60004D677 /* Main.storyboard */; };
-		63DD97BC2497612200454734 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DD97BB2497612200454734 /* MyCustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,7 +193,6 @@
 		63D5042E24905B740004D677 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
 		63D5043024905B8F0004D677 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		63D5043324905BF60004D677 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		63DD97BB2497612200454734 /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -437,7 +435,6 @@
 				2CBF570B247FC4B70093A343 /* SignInViewController.swift */,
 				63D5043324905BF60004D677 /* Main.storyboard */,
 				2CD6833E24976E9A00249A7E /* QutionaryViewController.swift */,
-				63DD97BB2497612200454734 /* MyCustomCell.swift */,
 				63D5042E24905B740004D677 /* SingUpViewController.swift */,
 				63D5043024905B8F0004D677 /* UserModel.swift */,
 			);
@@ -607,7 +604,6 @@
 				2CEBF30124907BC600C1DBB1 /* ColorViewController.swift in Sources */,
 				2CBF570A247FC4B70093A343 /* SceneDelegate.swift in Sources */,
 				2CEBF30B2490945000C1DBB1 /* SocketIOManager.swift in Sources */,
-				63DD97BC2497612200454734 /* MyCustomCell.swift in Sources */,
 				2CD6833F24976E9A00249A7E /* QutionaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
