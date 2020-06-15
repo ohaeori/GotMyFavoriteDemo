@@ -14,6 +14,8 @@ struct User {
     var pwd: String
     var name: String
     var gender: String
+    var mainTitle: String
+    var subTittle: String
     
     static var Users = [User]()
     
@@ -34,11 +36,21 @@ struct User {
     
     /******** initialization ********/
     init(){
-        self.id = ""; self.pwd = ""; self.name = ""; self.gender = "";
+        self.id = "";
+        self.pwd = "";
+        self.name = "";
+        self.gender = "";
+        self.mainTitle = "";
+        self.subTittle = "";
     }
     
     init(id: String, pwd: String, name: String, gender: String){
-        self.id = id; self.pwd = pwd; self.name = name; self.gender = gender;
+        self.id = id;
+        self.pwd = pwd;
+        self.name = name;
+        self.gender = gender;
+        self.mainTitle = "";
+        self.subTittle = "";
     }
 }
 

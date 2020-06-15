@@ -43,7 +43,7 @@ class MatchingViewController: UIViewController {
         SocketIOManager.shared.socketConnect()
       
         titleLabel.text = labelString
-        idLabel.text = receivedID
+        idLabel.text = User.Users[0].id
     }
     
     func makeArr(){

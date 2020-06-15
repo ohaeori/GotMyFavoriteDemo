@@ -41,7 +41,7 @@ class SignInViewController: UIViewController {
         }
         
         let signinsuccess = User.isUser(id: userid, pwd: userpwd)
-        if(true){//success login . signinsuccess
+        if(signinsuccess){//success login
             //change View
             let nextstoryboard: UIStoryboard? = UIStoryboard(name: "getFavorite", bundle: nil)
             guard let next = nextstoryboard?.instantiateViewController(withIdentifier: "CVC") as? ColorViewController else {
