@@ -53,6 +53,7 @@ class FoodViewController: UIViewController {
             next?.receivedID = self.receivedID
             next?.modalPresentationStyle = .fullScreen
             next?.modalTransitionStyle = .coverVertical
+            next?.labelString = mainTitle + subTitle
             self.present(next!, animated: true)
         }
         
