@@ -15,6 +15,7 @@ class QuestionViewController: UIViewController {
     var sizeO : Int = 280
     var sizeX : Int = 280
     var quizArr: [String] = []
+    var anserArr: [String] = []
     
     @IBOutlet weak var l1: UILabel!
     @IBOutlet weak var l2: UILabel!
@@ -49,7 +50,18 @@ class QuestionViewController: UIViewController {
         goNext()
         // Do any additional setup after loading the view.
     }
-    @IBAction func Up(_ sender: Any) {
+    
+        
+    @IBAction func btnCheck(_ sender: UIButton) {
+        if(sender.currentTitle == anserArr[cntNum-1]){
+            Down()
+        }
+        else{
+            Up()
+        }
+    }
+    
+    func Up() {
         if(sizeO > 60) {
             sizeO -= 60
         }
@@ -65,7 +77,7 @@ class QuestionViewController: UIViewController {
         print(cntO)
         
     }
-    @IBAction func Down(_ sender: UIButton) {
+    func Down() {
         if(sizeX > 60) {
             sizeX -= 60
         }
