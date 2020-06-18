@@ -12,7 +12,7 @@ class FoodViewController: UIViewController {
     @IBOutlet weak var Label: UILabel!
     
     var labelString: String = ""
-    var mediaString: String = "default"
+    var mediaString: String = "def"
     var subString: String = " "
     var mainTitle: String = "none"
     var subTitle: String = "none"

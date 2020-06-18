@@ -22,7 +22,7 @@ class MediaThemeViewController: UIViewController {
     @IBOutlet weak var btn9: UIButton!
     
     var labelString: String = ""
-    var mediaString: String = "default"
+    var mediaString: String = "defddd"
     var subString: String = " "
     var themeString: String = " "
     var btnArr: [UIButton] = []
@@ -68,7 +68,7 @@ class MediaThemeViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cvc = segue.destination as? MediaViewController{
-            if (MediaViewController.cnt == 0) {
+            if (MediaViewController.cnt == 0 || self.mediaString == "default") {
                 cvc.mediaString = theme[themeString]![Int(segue.identifier ?? "0") ?? 0] + " "
             }
             else {
