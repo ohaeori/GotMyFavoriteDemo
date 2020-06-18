@@ -43,10 +43,10 @@ class FoodViewController: UIViewController {
     
     func aaa(on button: UIButton){
         if (mainTitle == "none" && subTitle == "none") {
-            mainTitle = labelString + mediaString + (button.currentTitle ?? "err") + "\n"
+            mainTitle = " " + labelString + mediaString + (button.currentTitle ?? "err") + "  "
         }
         else if(subTitle == "none"){
-            subTitle = "(혹은 " + subString + (button.currentTitle ?? "err") + " 일지도...)"
+            subTitle = " " + subString + (button.currentTitle ?? "err") + "  "
             User.Users[0].mainTitle = self.mainTitle
             User.Users[0].subTitle = self.subTitle
             let nextstoryboard: UIStoryboard? = UIStoryboard(name: "Main", bundle: nil)
