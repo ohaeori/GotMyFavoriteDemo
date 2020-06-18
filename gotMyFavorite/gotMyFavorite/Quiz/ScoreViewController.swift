@@ -20,13 +20,21 @@ class ScoreViewController: UIViewController {
     
 
     @IBAction func Yes(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                      let next = storyboard.instantiateViewController(withIdentifier: "MatchingViewController") as? MatchingViewController
+                      
+          
+        
+                      next?.modalPresentationStyle = .fullScreen
+                      next?.modalTransitionStyle = .coverVertical
+                      self.present(next!, animated: true, completion: nil)
     }
     @IBAction func No(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let next = storyboard.instantiateViewController(withIdentifier: "MatchingViewController") as? MatchingViewController
                     
         
-        next?.receivedID = self.receivedID
+      
                     next?.modalPresentationStyle = .fullScreen
                     next?.modalTransitionStyle = .coverVertical
                     self.present(next!, animated: true, completion: nil)

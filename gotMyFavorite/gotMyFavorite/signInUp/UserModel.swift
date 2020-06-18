@@ -53,8 +53,8 @@ struct User {
         self.gender = gender;
         self.mainTitle = "";
         self.subTitle = "";
-        self.qList = ["질문1", "질문2", "질문3", "질문4", "질문5", "질문6"];
-        self.ansList = ["o", "o", "x", "o", "o", "x"];
+        self.qList = ["영화는 공포영화가 최고다.", "음식은 기름진 것이 좋다", "애완동물은 큰게 좋다", "색깔은 따뜻한 색이 좋다", "게임은 혼자가 좋다"];
+        self.ansList = ["o", "x", "o", "o", "o"];
     }
 }
 
