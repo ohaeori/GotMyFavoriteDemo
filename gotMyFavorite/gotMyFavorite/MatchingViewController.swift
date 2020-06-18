@@ -45,7 +45,10 @@ class MatchingViewController: UIViewController {
         SocketIOManager.shared.socketConnect()
       
         titleLabel1.sizeToFit()
-        titleLabel1.text = User.Users[0].mainTitle + User.Users[0].subTitle
+        titleLabel1.text = User.Users[0].mainTitle
+        
+        titleLabel2.sizeToFit()
+        titleLabel2.text = User.Users[0].subTitle
         
         idLabel.text = User.Users[0].id
         genderLabel.text = User.Users[0].gender=="남" ? "🚹" : "🚺"
