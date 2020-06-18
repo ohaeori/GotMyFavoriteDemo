@@ -144,7 +144,6 @@ class QuestionViewController: UIViewController {
                 
                 next?.score = cntO*10
                 
-                next?.receivedID = self.receivedID
                 next?.modalPresentationStyle = .fullScreen
                 next?.modalTransitionStyle = .coverVertical
                 self.present(next!, animated: true, completion: nil)                    }
